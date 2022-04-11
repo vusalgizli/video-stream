@@ -101,16 +101,16 @@ async def play_tg_file(c: Client, m: Message, replied: Message = None, link: str
             replied = await from_tg_get_msg(link)
         except Exception as e:
             LOGS.info(f"[ERROR]: {e}")
-            return await m.reply_text(f"🚫 error:\n\n» {e}")
+            return await m.reply_text(f"🚫 xəta:\n\n» {e}")
     if not replied:
         return await m.reply(
             "» reply to an **audio file** or **give something to search.**"
         )
     if replied.video or replied.document:
         if not link:
-            loser = await replied.reply("📥 downloading video...")
+            loser = await replied.reply("📥 yüklənir video...")
         else:
-            loser = await m.reply("📥 downloading video...")
+            loser = await m.reply("📥 yüklənir video...")
         dl = await replied.download()
         link = replied.link
         songname = "video"
@@ -123,7 +123,7 @@ async def play_tg_file(c: Client, m: Message, replied: Message = None, link: str
                 Q = int(pq)
             else:
                 await loser.edit(
-                    "start streaming the local video in 720p quality"
+                    "yerli videonu 720p keyfiyyətdə yayımlamağa başlayın"
                 )
         try:
             if replied.video:
@@ -135,7 +135,7 @@ async def play_tg_file(c: Client, m: Message, replied: Message = None, link: str
             songname = "video"
 
         if chat_id in QUEUE:
-            await loser.edit("🔄 Queueing Track...")
+            await loser.edit("🔄 Növbə İzi...")
             gcname = m.chat.title
             ctitle = await CHAT_TITLE(gcname)
             title = songname
@@ -150,9 +150,9 @@ async def play_tg_file(c: Client, m: Message, replied: Message = None, link: str
                 photo=image,
                 reply_markup=InlineKeyboardMarkup(buttons),
                 caption=f"💡 **Track added to queue »** `{pos}`\n\n"
-                        f"🗂 **Name:** [{songname}]({link}) | `video`\n"
-                        f"⏱️ **Duration:** `{duration}`\n"
-                        f"🧸 **Request by:** {requester}",
+                        f"🗂 **Ad:** [{songname}]({link}) | `video`\n"
+                        f"⏱️ **Müddət:** `{duration}`\n"
+                        f"🧸 **tərəfindən sorğu:** {requester}",
             )
             remove_if_exists(image)
         else:
