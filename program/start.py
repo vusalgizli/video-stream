@@ -85,11 +85,14 @@ async def start_(c: Client, message: Message):
     await add_served_user(user_id)
     await message.reply_text(
         f"""Hi {message.from_user.mention()} 👋🏻\n
-💭 [{me_bot.first_name}](https://t.me/{ASOmusicbot}) is a bot to play music and video in groups, through the new Telegram video chats.
+💭 [{me_bot.first_name}](https://t.me/{ASOmusicbot}) Salam Men 𓄂𝙰𝚂𝙾🇦🇿 Federasiyasinin, Qruplarda Oxuyan Musiqi Botuyam.
 
-🕵🏻 Check out all the **Bot's commands** and how they work by clicking on the » 📚 **Menyu** button!
+🕵🏻 Melumat ucun **Botun Menyusuna Girin** Elave Melumat Üçün » 📚 **@ismiyev95**  Yazın
 
-🧑🏻‍💻 To know how to use this bot, please click on the » ❓ **Asisstant** button!
+
+
+
+🧑🏻‍💻  Asistanti Getirin /userbotjoin» ❓ **Asisstant** button!
 """,
         reply_markup=InlineKeyboardMarkup(
             [
