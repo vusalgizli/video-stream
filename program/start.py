@@ -94,12 +94,12 @@ async def start_(c: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("➕ Add me to a Group ➕", url=f"https://t.me/{me_bot.username}?startgroup=true")
+                    InlineKeyboardButton("➕ Qurupa Əlavə Edin ➕", url=f"https://t.me/{me_bot.username}?startgroup=true")
                 ],[
-                    InlineKeyboardButton("❓ Basic Guide", callback_data="user_guide")
+                    InlineKeyboardButton("❓ Əsas Bələdçi", callback_data="user_guide")
                 ],[
-                    InlineKeyboardButton("📚 Commands", callback_data="command_list"),
-                    InlineKeyboardButton("❤️ Donate", url=f"https://t.me/{OWNER_USERNAME}")
+                    InlineKeyboardButton("📚 Komutlar", callback_data="command_list"),
+                    InlineKeyboardButton("❤️ Donate", url=f"https://t.me/{Vusalzn}")
                 ],[
                     InlineKeyboardButton("👥 Support Group", url=f"https://t.me/{GROUP_SUPPORT}"),
                     InlineKeyboardButton("📣 Support Channel", url=f"https://t.me/{UPDATES_CHANNEL}")
