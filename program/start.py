@@ -84,12 +84,13 @@ async def start_(c: Client, message: Message):
     user_id = message.from_user.id
     await add_served_user(user_id)
     await message.reply_text(
-        f"""Hi {message.from_user.mention()} 👋🏻\n
-💭 [{me_bot.first_name}](https://t.me/{me_bot.username}) is a bot to play music and video in groups, through the new Telegram video chats.
+        f"""Salam {message.from_user.mention()} 👋🏻\n
+💭 [{me_bot.first_name}](https://t.me/{me_bot.username}) Telegram Qruplarda Səsli Söhbətdə Musiqi və Video Oynatmağa imkan verir
+.
 
-🕵🏻 Check out all the **Bot's commands** and how they work by clicking on the » 📚 **Commands** button!
+🕵🏻 Check out all the **Bot's commands** and how they work by clicking on the » 📚 **Əmrlər** menyusu!
 
-🧑🏻‍💻 To know how to use this bot, please click on the » ❓ **Basic Guide** button!
+🧑🏻‍💻 To know how to use this bot, please click on the » ❓ **Əsas Bələdçi** button!
 """,
         reply_markup=InlineKeyboardMarkup(
             [
@@ -98,13 +99,13 @@ async def start_(c: Client, message: Message):
                 ],[
                     InlineKeyboardButton("❓ Əsas Bələdçi", callback_data="user_guide")
                 ],[
-                    InlineKeyboardButton("📚 Komutlar", callback_data="command_list"),
+                    InlineKeyboardButton("📚 Əmirlər", callback_data="command_list"),
                     InlineKeyboardButton("❤️ Donate", url=f"https://t.me/{Vusalzn}")
                 ],[
                     InlineKeyboardButton("👥 Support Group", url=f"https://t.me/{GROUP_SUPPORT}"),
                     InlineKeyboardButton("📣 Support Channel", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],[
-                    InlineKeyboardButton("🌐 Source Code", url="https://github.com/levina-lab/video-stream")
+                    InlineKeyboardButton("Owner 👨🏻‍💻", url="https://t.me/Vusalzn")
                 ],
             ]
         ),
